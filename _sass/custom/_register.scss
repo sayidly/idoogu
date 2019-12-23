@@ -74,4 +74,13 @@ form.ajax {
 
 form .main {
   padding: 0 48px;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
+}
+
+form .main .button {
+  margin-bottom: 48px;
+  padding: 16px 0;
 }
