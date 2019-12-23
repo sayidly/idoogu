@@ -1,0 +1,23 @@
+lang:
+  zh: 中文
+menu:
+  who: 关于我们
+  why: 为什么乐高电影
+  timeline: 课程安排
+  register: 报名信息
+
+demo:
+  success:
+    title: 报名成功!
+    body: 你应该有收到我们的确认邮件。 如果没有， <a href='mailto:hello@idoogu.com'>联系我们</a>。
+  form:
+    title-s: 学员信息
+    title-c: 课程信息
+    fields:
+      p-name: 家长姓名
+      s-name: 学员姓名
+      email: 邮箱
+      phone: 电话号码
+      wechat: 微信ID
+      comment: 留言
+    submit: 完成报名

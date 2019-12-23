@@ -1,0 +1,236 @@
+input[type=checkbox] {
+  height: $space + 1;
+  left: 0;
+  opacity: 0;
+  outline: 0;
+  position: absolute;
+  z-index: -1;
+  &:checked {
+    & + span {
+      &:before {
+        background-color: $black;
+      }
+      &:hover {
+        color: $yellow;
+        &:before {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  & + span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 1.5*$space;
+    padding-top: $space/12;
+    transition-property: color;
+    transition-duration: $ease;
+    &:before {
+      background-image: url(./icons/icon-checked.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: 1px solid $black;
+      content: '';
+      display: inline-block;
+      float: left;
+      height: $space;
+      margin-left: -1.5*$space;
+      margin-right: $space/2;
+      margin-top: -$space/12;
+      transition-property: background, border;
+      transition-duration: $ease;
+      width: $space;
+    }
+    &:hover {
+      color: $yellow;
+      &:before {
+        border-color: $yellow;
+      }
+    }
+  }
+}
+
+input[type=email],
+input[type=tel],
+input[type=password],
+input[type=text],
+input[type=number],
+textarea,
+select {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  position: relative;
+}
+
+input[type=email],
+input[type=tel],
+input[type=password],
+input[type=text],
+input[type=number],
+textarea,
+.select select {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid $line;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  padding: ($space/6 + 1) 0 $space/6;
+  transition-property: border;
+  transition-duration: $ease;
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $black;
+    outline: none;
+  }
+  &[disabled],
+  &[disabled=disabled],
+  &[disabled=true],
+  &[disabled],
+  &[readonly=true],
+  &[readonly=readonly],
+  &[readonly] {
+    border-color: $light;
+    &:active,
+    &:focus,
+    &:hover {
+      background: $light;
+      border-color: $light;
+    }
+  }
+}
+
+.field {
+  display: block;
+  margin-bottom: $space;
+  position: relative;
+  label {
+    cursor: text;
+    display: block;
+    @include font-size($smaller);
+    font-weight: 300;
+    transition-duration: $ease;
+    position: relative;
+    transition-property: color, font-size, top;
+  }
+  &.required label {
+    &:after {
+      color: $yellow;
+      content: ' *';
+    }
+  }
+  p.required {
+    &:after {
+      color: $yellow;
+      content: ' *';
+    }
+  }
+  .description,
+  .message {
+    color: $grey;
+    display: block;
+    margin: $space/3 0 0;
+  }
+  .description {
+    @include font-size($small);
+    line-height: 160%;
+  }
+  .message {
+    background: url(./icons/icon-cross-red.svg) no-repeat left center;
+    padding-left: $space + $space/8;
+  }
+  &.error {
+    input,
+    input:hover,
+    input:active,
+    input:focus {
+      border-color: $primary;
+    }
+    .message {
+      background-image: url(./icons/icon-cross-red.svg);
+    }
+  }
+  &.ok {
+    input {
+      border-color: $grey;
+    }
+    input:hover,
+    input:active,
+    input:focus {
+      border-color: $green;
+    }
+    .message {
+      background-image: url(./icons/icon-checked-green.svg);
+    }
+  }
+  // Floating labels
+  &.floating {
+    padding-top: $space + 1;
+    label {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+    input,
+    select,
+    textarea {
+       ::placeholder,
+      &::placeholder {
+        color: transparent;
+      }
+       ::-moz-placeholder,
+      &::-moz-placeholder {
+        color: transparent;
+      }
+       :-ms-input-placeholder,
+      &:-ms-input-placeholder {
+        color: transparent;
+      }
+       ::-webkit-input-placeholder,
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &:placeholder-shown:not(:focus)+* {
+        color: inherit;
+        font-size: inherit;
+        top: $space + $space/6 + 2;
+      }
+    }
+  }
+  &.full-width {
+    input,
+    .select,
+    .select select,
+    textarea {
+      width: 100%;
+    }
+  }
+}
+
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  & > select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 1.5*$space;
+  }
+  &:after {
+    bottom: 0;
+    content: '▾';
+    cursor: pointer;
+    @include font-size($smaller);
+    line-height: 1;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

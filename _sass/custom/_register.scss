@@ -1,0 +1,77 @@
+
+@-webkit-keyframes spinning { to { transform: rotate(360deg); }}
+@-moz-keyframes spinning { to { transform: rotate(360deg); }}
+@-ms-keyframes spinning { to { transform: rotate(360deg); }}
+@-o-keyframes spinning { to { transform: rotate(360deg); }}
+@keyframes spinning { to { transform: rotate(360deg); }}
+
+@mixin spin($delay) {
+  -webkit-animation: spinning $delay linear infinite;
+  -moz-animation: spinning $delay linear infinite;
+  -ms-animation: spinning $delay linear infinite;
+  -o-animation: spinning  $delay linear infinite;
+  animation: spinning $delay linear infinite;
+}
+
+/* Forms */
+form.ajax {
+  max-width: $body;
+  .success {
+    display: none;
+  }
+  &.submitted {
+    .success {
+      display: block;
+    }
+    .body {
+      display: none;
+    }
+  }
+}
+
+/* Loading animation */
+
+.loading {
+  .body {
+    position: relative;
+    &:before {
+      background: #FFF;
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: 0.8;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 999;
+    }
+    &:after {
+      @include spinner($space/6, 1.5*$space, $yellow, $light, $ease: 4*$ease);
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+    }
+    .actions {
+      position: relative;
+      .button,
+      .button:hover,
+      .button:active,
+      .button.active {
+        background: $yellow;
+        border-color: $yellow;
+        cursor: auto;
+      }
+
+    }
+  }
+}
+
+form .main {
+  padding: 0 48px;
+}

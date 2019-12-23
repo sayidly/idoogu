@@ -1,0 +1,126 @@
+<form id="application" class="ajax" action="" type="POST">
+  <div class="success">
+    <h2>{{ t.demo.success.title }}</h2>
+    <p class="margin-bottom-0">{{ t.demo.success.body }}</p>
+  </div>
+  <div class="body">
+    <section class="main">
+      <div class="row">
+        <div class="left">
+          <h3>{{ t.demo.form.title-s }}</h3>
+          <div class="field floating required full-width">
+            <input id="demo-p-name" name="name" type="text" placeholder="{{ t.demo.form.fields.p-name }}" required />
+            <label for="demo-p-name">{{ t.demo.form.fields.p-name }}</label>
+          </div>
+          <div class="field floating required full-width">
+            <input id="demo-s-name" name="name" type="text" placeholder="{{ t.demo.form.fields.s-name }}" required />
+            <label for="demo-s-name">{{ t.demo.form.fields.s-name }}</label>
+          </div>
+          <div class="field">
+            <p class="required">学员年龄</p>
+            <ul class="grid-4 padded">
+              <li>
+                <label>
+                  <input type="checkbox" value="6 years old" name="interest" />
+                  <span>6岁<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="7 years old" name="interest" />
+                  <span>7岁<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="8 years old" name="interest" />
+                  <span>8岁<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="9 years old" name="interest" />
+                  <span>9岁<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="10 years old" name="interest" />
+                  <span>10岁<span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="field floating required full-width">
+            <input id="demo-email" name="email" type="email" placeholder="{{ t.demo.form.fields.email }}" required />
+            <label for="demo-email">{{ t.demo.form.fields.email }}</label>
+          </div>
+          <div class="field floating required full-width">
+            <input id="demo-phone" name="phone" type="tel" placeholder="{{ t.demo.form.fields.phone }}" required />
+            <label for="demo-phone">{{ t.demo.form.fields.phone }}</label>
+          </div>
+          <div class="field floating full-width">
+            <input id="demo-wechat" name="wechat" type="text" placeholder="{{ t.demo.form.fields.wechat }}" required />
+            <label for="demo-wechat">{{ t.demo.form.fields.wechat }}</label>
+          </div>
+          <div class="field floating full-width">
+            <input id="demo-comment" name="comment" type="text" placeholder="{{ t.demo.form.fields.comment }}"
+              required />
+            <label for="demo-comment">{{ t.demo.form.fields.comment }}</label>
+          </div>
+        </div>
+        <div class="right">
+          <h3>{{ t.demo.form.title-c }}</h3>
+          <div class="field">
+            <p>抢鲜体验班</p>
+            <ul class="grid-1 padded">
+              <li>
+                <label>
+                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <span>2020-2-7 09:30 ~ 12:30<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <span>2020-2-7 13:30 ~ 16:30<span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="field">
+            <p>上海小小摄影师养成班</p>
+            <ul class="grid-1 padded">
+              <li>
+                <label>
+                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <span>2020-2-8, 2020-2-9 09:30 ~ 16:30<span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <span>2020-2-10, 2020-2-11 09:30 ~ 16:30<span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="field">
+            <p>青岛小小摄影师养成班</p>
+            <ul class="grid-1 padded">
+              <li>
+                <label>
+                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <span>2020-2-13,2020-2-14 09:30 ~ 16:30<span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="margin-top-2x">
+      <input class="button full-width" type="submit" value="{{ t.demo.form.submit }}" />
+    </footer>
+  </div>
+</form>

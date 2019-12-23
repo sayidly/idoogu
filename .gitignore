@@ -1,0 +1,16 @@
+.*
+!.gitignore
+!.gitmodules
+*~
+
+_site/
+
+# only add scss files from node_modules
+node_modules/**/*.md
+node_modules/**/*.js
+node_modules/**/*.ts
+node_modules/**/*.json
+node_modules/**/LICENSE
+node_modules/**/LICENCE
+node_modules/**/Makefile
+node_modules/**/dist/
