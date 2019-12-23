@@ -1,6 +1,6 @@
 #footer {
-  background: $light;
-  color: $grey;
+  background: $primary;
+  color: $black;
   @include font-size($smaller);
   line-height: 140%;
   padding: $space/2;
@@ -26,6 +26,6 @@
     padding: $space 0;
   }
   .legal {
-    color: $grey;
+    color: $black;
   }
 }
