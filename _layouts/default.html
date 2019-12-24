@@ -60,7 +60,6 @@
   {% if site.google_analytics %}{% include google/analytics.html %}{% endif %}
   {% for script in page.scripts %}<script src="{{ site.url }}{{ site.baseurl }}{{ script }}?tag-{{ site.tag }}"
     type="text/javascript"></script>{% endfor %}
-  <!-- threejs -->
 
   <script>
     var scroll = new SmoothScroll('a[href*="#"]');

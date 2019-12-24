@@ -50,6 +50,59 @@ input[type=checkbox] {
   }
 }
 
+input[type=radio] {
+  height: $space + 1;
+  left: 0;
+  opacity: 0;
+  outline: 0;
+  position: absolute;
+  z-index: -1;
+  &:checked {
+    & + span {
+      &:before {
+        background-color: $black;
+      }
+      &:hover {
+        color: $yellow;
+        &:before {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+  & + span {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 1.5*$space;
+    padding-top: $space/12;
+    transition-property: color;
+    transition-duration: $ease;
+    &:before {
+      background-image: url(./icons/icon-checked.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: 1px solid $black;
+      content: '';
+      display: inline-block;
+      float: left;
+      height: $space;
+      margin-left: -1.5*$space;
+      margin-right: $space/2;
+      margin-top: -$space/12;
+      transition-property: background, border;
+      transition-duration: $ease;
+      width: $space;
+      border-radius: 100%;
+    }
+    &:hover {
+      color: $yellow;
+      &:before {
+        border-color: $yellow;
+      }
+    }
+  }
+}
+
 input[type=email],
 input[type=tel],
 input[type=password],

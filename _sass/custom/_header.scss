@@ -16,20 +16,25 @@
     }
   }
   .links {
-    float: left;
+    // float: left;
+    display: flex;
+    justify-content: space-between;
     a {
-      margin-right: 1.5*$space/2;
+      margin-right: 2*$space;
       &.link-home {
         svg {
           height: 14px;
         }
         margin-right: 2*$space;
       }
+      &:last-child {
+        margin-right: 0;
+      }
     }
     @include breakpoint(mobile) {
-      .link-how,
-      .link-solutions,
-      .link-why {
+      .link-who,
+      .link-why,
+      .link-timeline {
         display: none;
       }
     }

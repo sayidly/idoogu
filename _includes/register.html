@@ -21,31 +21,31 @@
             <ul class="grid-4 padded">
               <li>
                 <label>
-                  <input type="checkbox" value="6 years old" name="interest" />
+                  <input type="radio" id="age1" value="6" name="age" required />
                   <span>6岁<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="7 years old" name="interest" />
+                  <input type="radio" id="age2" value="7" name="age" required />
                   <span>7岁<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="8 years old" name="interest" />
+                  <input type="radio" id="age3" value="8" name="age" required />
                   <span>8岁<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="9 years old" name="interest" />
+                  <input type="radio" id="age4" value="9" name="age" required />
                   <span>9岁<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="10 years old" name="interest" />
+                  <input type="radio" id="age5" value="10" name="age" required />
                   <span>10岁<span>
                 </label>
               </li>
@@ -60,46 +60,45 @@
             <label for="demo-phone">{{ t.demo.form.fields.phone }}</label>
           </div>
           <div class="field floating full-width">
-            <input id="demo-wechat" name="wechat" type="text" placeholder="{{ t.demo.form.fields.wechat }}" required />
+            <input id="demo-wechat" name="wechat" type="text" placeholder="{{ t.demo.form.fields.wechat }}" />
             <label for="demo-wechat">{{ t.demo.form.fields.wechat }}</label>
           </div>
           <div class="field floating full-width">
-            <input id="demo-comment" name="comment" type="text" placeholder="{{ t.demo.form.fields.comment }}"
-              required />
+            <input id="demo-comment" name="comment" type="text" placeholder="{{ t.demo.form.fields.comment }}" />
             <label for="demo-comment">{{ t.demo.form.fields.comment }}</label>
           </div>
         </div>
         <div class="right">
           <h3>{{ t.demo.form.title-c }}</h3>
           <div class="field">
-            <p>抢鲜体验班</p>
+            <p class="required">抢鲜体验班</p>
             <ul class="grid-1 padded">
               <li>
                 <label>
-                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <input type="radio"  value="体验班:2020-2-7 09:30 ~ 12:30" name="course_a" required />
                   <span>2020-2-7 09:30 ~ 12:30<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <input type="radio"  value="体验班:2020-2-7 13:30 ~ 16:30" name="course_a" required />
                   <span>2020-2-7 13:30 ~ 16:30<span>
                 </label>
               </li>
             </ul>
           </div>
           <div class="field">
-            <p>上海小小摄影师养成班</p>
+            <p class="required">上海小小摄影师养成班</p>
             <ul class="grid-1 padded">
               <li>
                 <label>
-                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <input type="radio" value="养成班:上海：2020-2-8, 2-9 09:30 ~ 16:30" name="course_b" optional />
                   <span>2020-2-8, 2020-2-9 09:30 ~ 16:30<span>
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <input type="radio" value="养成班:上海：2020-2-10, 2-11 09:30 ~ 16:30" name="course_b" optional />
                   <span>2020-2-10, 2020-2-11 09:30 ~ 16:30<span>
                 </label>
               </li>
@@ -110,17 +109,20 @@
             <ul class="grid-1 padded">
               <li>
                 <label>
-                  <input type="checkbox" value="2020-2-7 morning" name="interest" />
+                  <input type="radio" value="青岛：2020-2-13,2-14 09:30 ~ 16:30" name="course_b" optional />
                   <span>2020-2-13,2020-2-14 09:30 ~ 16:30<span>
                 </label>
               </li>
             </ul>
           </div>
+          <div class="margin-top-4x">
+            <input class="button full-width" type="submit" value="{{ t.demo.form.submit }}" />
+          </div>
         </div>
       </div>
     </section>
-    <footer class="main">
+    <!-- <footer class="main">
       <input class="button full-width" type="submit" value="{{ t.demo.form.submit }}" />
-    </footer>
+    </footer> -->
   </div>
 </form>
