@@ -149,4 +149,11 @@
       margin-bottom: -5*$space;
     }
   }
+  #who {
+    video {
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+  }
 }
