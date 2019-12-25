@@ -1,25 +1,40 @@
 ---
 layout: default
-title: idoogu | 爱嘟嘟
-description: "idoogu 就是爱嘟嘟啦"
+title: idoogu 就是爱嘟嘟啦
+description: "idoogu就是爱嘟嘟啦"
 lang: zh
 class: yellow-hero
 ---
 
-<section id="hero">
+<!-- <section id="hero">
   <div class="container">
     <ul class="grid-2 overflow-hidden">
       <li>
         <p>2020.2.7-2.10</p>
         <h1>乐高英雄勇闯魔都</br>小小摄影师</h1>
         <p>除了让孩子学会拍电影，更结合了欧美最火的计算思维</p>
+        <a href="#" class="button">立即报名</a>
       </li>
       <li class="tablet-only decoration">
         <div id="three-container"></div>
       </li>
     </ul>
+  </div>
+</section> -->
 
-    <a href="#" class="button">立即报名</a>
+<section id="hero">
+  <div class="container">
+    <ul class="grid-2">
+      <li>
+        <p>2020.2.7-2.10</p>
+        <h1>乐高英雄勇闯魔都</br>小小摄影师</h1>
+        <p>除了让孩子学会拍电影，更结合了欧美最火的计算思维</p>
+        <a href="#" class="button">立即报名</a>
+      </li>
+      <li class="tablet-only decoration">
+        <div id="three-container" class="three-bg"></div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -51,20 +66,32 @@ class: yellow-hero
   </section>
 
 <section id="timeline" class="border-top">
-  <div class="container narrow align-center">
+  <div class="container">
     <div class="row">
       <span class="strapline">Our content</span>
-      <h2 class="margin-bottom-2x">8堂课 12小时</h2>
-      <ol class="grid-4 padded">
-        <li>认识电影</li>
-        <li>电影技巧说明</li>
-        <li>如何说故事编剧</li>
-        <li>运镜技巧</li>
-        <li>当个小导演</li>
-        <li>拍电影不简单</br>伟大的幕后人员</li>
-        <li>Action!</li>
-        <li>电影发表会</li>
-      </ol>
+      <h2 class="margin-bottom-2x">课程说明</h2>
+      <div class="left">
+        <h3>抢鲜体验班 (3 小时) </h3>
+        <p>我的孩子不喜欢怎么办？沒事！这堂课就是特别为您准备的。三小时的学习体验班，先体验，喜欢可以再报名两天完整课程班。</p>
+        <p>可以两场都报吗？当然可以，课程都是精心设计的，教学内容完全不重复。還能折抵報名費 $200 元。</p>
+        <div class="grid-2 margin-bottom">
+          <p>定价<strong>$600</strong></p>
+          <p>早鸟<strong>$500</strong></br> (1/15 前完成报名）</p>
+        </div>
+        {% include utils/i18n.liquid %}
+        {% include class-trail.html %}
+      </div>
+      <div class="right">
+        <h3>小小摄影师养成班（12 小时） </h3>
+        <p>两天 12 小时的课程，我们教孩子如何说故事，什么是动画，怎么拍摄，更重要的，不能只有学习，还要拍出属于孩子的动画片。</p>
+        <p>这是门全新设计的课程，我们将去年的课程重新规划，让孩子除了学会拍电影，也能接触到对未来帮助非常大的计算思维。</p>
+        <div  class="grid-2 margin-bottom">
+          <p>定价<strong>$2600 </strong></p>
+          <p>早鸟<strong>$2400</strong></br>(1/15 前完成报名）</p>
+        </div>
+        {% include utils/i18n.liquid %}
+        {% include class-normal.html %}
+      </div>
     </div>
   </div>
 </section>

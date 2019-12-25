@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 /**
 * Generate a scene object with a background color
@@ -25,7 +25,7 @@ function getScene() {
 function getCamera() {
   var aspectRatio = window.innerWidth / window.innerHeight;
   var camera = new THREE.PerspectiveCamera(45, aspectRatio, 1, 1000);
-  camera.position.set(0, 0, 8);
+  camera.position.set(0, 0, 6);
   return camera;
 }
 
@@ -58,10 +58,10 @@ function getRenderer() {
   // Add support for retina displays
   renderer.setPixelRatio(window.devicePixelRatio);
   // Specify the size of the canvas
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth/2, window.innerHeight/2);
   // Add the canvas to the DOM
-  // document.getElementById('three-container').appendChild(renderer.domElement);
-  document.body.appendChild(renderer.domElement);
+  document.getElementById('three-container').appendChild(renderer.domElement);
+  // document.body.appendChild(renderer.domElement);
   return renderer;
 }
 
@@ -73,8 +73,10 @@ function getRenderer() {
 
 function getControls(camera, renderer) {
   var controls = new THREE.TrackballControls(camera, renderer.domElement);
-  controls.zoomSpeed = 0.4;
-  controls.panSpeed = 0.4;
+  // controls.zoomSpeed = 0.4;
+  // controls.panSpeed = 0.4;
+  controls.noPan = true;
+  controls.noZoom = true;
   return controls;
 }
 
@@ -84,10 +86,10 @@ function getControls(camera, renderer) {
 
 function loadModel() {
   var loader = new THREE.OBJLoader();
-  loader.load( 'assets/3d/lego-obj.obj', function ( object ) {
+  loader.load( 'assets/3d/b_c.obj', function ( object ) {
     // object.rotation.z = Math.PI;
     scene.add( object );
-    document.querySelector('h1').style.display = 'none';
+    // document.querySelector('h1').style.display = 'none';
   } );
 }
 
@@ -110,4 +112,4 @@ var controls = getControls(camera, renderer);
 loadModel()
 
 render();
-// });
+});
