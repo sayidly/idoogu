@@ -38,6 +38,11 @@ h6 {
   line-height: inherit;
 }
 
+p {
+  @include font-size($headline-3);
+  line-height: 170%;
+}
+
 a {
   color: $yellow;
   transition-property: background, color;
