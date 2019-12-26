@@ -18,6 +18,12 @@ h6 {
   color: inherit;
 }
 
+h1 {
+  @include breakpoint(mobile) {
+    @include font-size($headline-1*.8);
+  }
+}
+
 h3,
 h4,
 h5,
