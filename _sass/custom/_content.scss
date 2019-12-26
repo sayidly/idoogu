@@ -156,4 +156,14 @@
       }
     }
   }
+  #timeline {
+    .earlybird-price {
+      font-size: 160%;
+      color: $primary;
+      vertical-align: middle;
+    }
+    .earlybird-price ~ span {
+      @include font-size($smaller);
+    }
+  }
 }
