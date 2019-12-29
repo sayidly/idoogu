@@ -7,7 +7,7 @@
   a {
     color: inherit;
     &:hover {
-      color: $yellow;
+      color: darken($yellow, 40%);
       text-decoration: none;
     }
   }
@@ -27,5 +27,20 @@
   }
   .legal {
     color: $black;
+  }
+  .qrcode {
+    width: 100px;
+    @include breakpoint(mobile) {
+      width: 160px;
+    }
+  }
+  li:last-child {
+    text-align: right;
+    @include breakpoint(mobile) {
+      text-align: left;
+    }
+    @include breakpoint(up_to_desktop) {
+      text-align: left;
+    }
   }
 }

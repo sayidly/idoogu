@@ -151,6 +151,7 @@
   }
   #who {
     video {
+      width: 100%;
       @include breakpoint(mobile) {
         width: 100%;
       }
