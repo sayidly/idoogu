@@ -1,8 +1,9 @@
 
 ## 使用 Jekyll CMS 和 egg sass
 
-- [jekyll](https://jekyllrb.com/) 
-- [egg](https://wiredcraft.github.io/egg/)
+- [jekyll](https://jekyllrb.com/) for cms
+- [egg](https://wiredcraft.github.io/egg/) for scss
+- [getform](https://getform.io/) for form service
 
 ## 下载 & 运行
 
